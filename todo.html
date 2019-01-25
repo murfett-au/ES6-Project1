@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do</title>
+	<script src="./todo.js"></script>
+	<link rel="stylesheet" href="todo.css">
+</head>
+<body>
+
+	<p>Welcome to my simple to-do list</p>
+	<div id="buttons">
+		<button id='signUp' onClick=signUpClick()>SignUp</button>
+		<button id='login' onclick=loginClick()>Log In</button>
+	</div>
+	<div style="display:none" id='signupDiv'>
+		<label for="firstname">First Name:</label><input id='firstname' /><span class='error' id='firstnameerror'></span><br>
+		<label for="lastname">Last Name:</label><input id='lastname' /><span class='error' id='lastnameerror'></span><br>
+		<label for="email">Email:</label><input id='email' /><span class='error' id='emailerror'></span><br>
+		<label for="password">Password:</label><input type='password' id='password'/><span class='error' id='passworderror'></span><br>
+		<label style="width:auto"><input type="checkbox" id='agree'>I Agree to the terms and conditions of use</label><span class='error' id='agreeerror'></span><br>
+		<button id="signupSubmit" onclick=signupSubmit()>Submit</button>
+	</div>
+	<div style="display:none" id='loginDiv'>
+		<label for="email">Email:</label><input id='email' /><span class='error' id='emailerror'></span><br>
+		<label for="password">Password:</label><input type='password' id='password'/><span class='error' id='passworderror'></span><br>
+		<button id="signupSubmit" onclick=loginAttempt()>Login</button>
+	</div>
+	<div style="display:none" id='dashboardDiv'>
+		<h4>All To Do Lists:</h4>
+		<ul id="todoLists">
+		</ul>
+		<input placeholder="Enter new to do list name here" id="newToDoListName"><button id="addToDoList" onclick=addToDoList()>Add new ToDo List</button>
+	</div>
+	<div style="display:none" id='todoListDiv'>
+		<h4 id="listname"></h4><input placeholder="Enter new list name here" id="newListname"><button  onclick=renameList()>Rename</button>
+		<ul id="todoItems">
+		</ul>
+	</div>
+</body>
+</html>
